@@ -1,4 +1,4 @@
-const fs = require('node:fs');
+const fs = require('node:fs/promises');
 
 // fs.readFile('./archivo.txt', (error,datos) => {
 //     if (error) {
@@ -6,15 +6,18 @@ const fs = require('node:fs');
 //     }else{
 //         console.log(datos.toString());
 //     }
-
 // })
 
-function leer(error, datos) {
-    if (error) {
-        console.log('Error al leer el archivo');
-    }else{
-        console.log(datos.toString());
-    }
-}
+fs.readFile('./archivo.txt').then(datos => {
+    console.log(datos.toString())
+}).catch(error => {
+    console.log(error)
+})
 
-fs.readFile('./archivo.txt', leer)
+// function leer(error, datos) {
+//         if (error) {
+//         console.log('Error al leer el archivo');
+//     }else{
+//         console.log(datos.toString());
+//     }
+// }
