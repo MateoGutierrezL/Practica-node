@@ -1,0 +1,20 @@
+
+h1{
+    text-align: center;
+    padding: 30px;
+    margin: 10px;
+    font-size: 80px;
+}
+
+body{
+    background-color: azure;
+}
+
+img{
+    align-items: center;
+    width: 100px;
+}
+
+video{
+    width: 500px;
+}
