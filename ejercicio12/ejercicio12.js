@@ -69,10 +69,11 @@ function recuperar(pedido, respuesta){
         respuesta.writeHead(200, {'content-type' : 'text/html'})
         const pagina = 
         `<!doctype html><html><head><tittle>Datos del formulario</tittle></head><body>
-        <h2>Nombre de usuario: ${formulario.get}('nombre')}</h2>
+        <h2>Nombre de usuario: ${formulario.get('nombre')}</h2>
         <h2>Clave: ${formulario.get('clave')}</h2><br>
         <a href="index.html">Volver</a>
         </body></html>`
+        respuesta.end(pagina)
     })
 }
 
